@@ -7,9 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "clean-text>=0.7.1",
     "fastapi>=0.143.0",
-    "scikit-learn>=1.9.1",
+    "scikit-learn==1.7.2",
     "sentence-transformers>=6.1.0",
-    "torch>=2.14.1",
+    "torch>=2.8",
     "uvicorn>=0.54.0",
 ]
 
@@ -19,3 +19,13 @@ dev = [
     "pytest-dotenv>=0.5.2",
     "httpx2>=2.13.1",
 ]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
