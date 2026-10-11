@@ -10,3 +10,8 @@ repos:
      hooks:
        - id: xenon
          args: ['--max-absolute=B', '--max-modules=B', '--max-average=A']
+   - repo: https://github.com/pre-commit/mirrors-mypy
+     rev: v2.3.1
+     hooks:
+       - id: mypy
+         args: [--explicit-package-bases, --ignore-missing-imports]
