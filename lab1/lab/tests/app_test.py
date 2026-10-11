@@ -54,3 +54,16 @@ def test_predict_virginica():
 
     assert response.status_code == 200
     assert response.json() == {"prediction": "virginica"}
+
+
+def test_predict_virginica_out_of_order():
+    request_data = {
+        "sepal_width": 3.3,
+        "sepal_length": 6.3,
+        "petal_width": 2.5,
+        "petal_length": 6.0,
+    }
+    response = client.post("/predict", json=request_data)
+
+    assert response.status_code == 200
+    assert response.json() == {"prediction": "virginica"}
