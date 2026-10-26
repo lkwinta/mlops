@@ -1,0 +1,17 @@
+[project]
+name = "mlops-lab03-hw"
+version = "1.0.0"
+description = ""
+readme = "README.md"
+
+requires-python = ">=3.11"
+
+dependencies = [
+    "altair>=6.3.0",
+    "jupyter",
+    "matplotlib",
+    "pandas",
+    "polars",
+    "pyarrow",
+    "ruff",
+]
