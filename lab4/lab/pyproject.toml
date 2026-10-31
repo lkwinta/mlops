@@ -1,5 +1,5 @@
 [project]
-name = "MLOps_course_AGH_lab_08"
+name = "MLOps_course_AGH_lab_04"
 version = "1.0.0"
 description = ""
 readme = "README.md"
@@ -17,10 +17,11 @@ dependencies = [
     "pgvector>=0.4.0",
     "pillow>=11.1.0",
     "psycopg>=3.3.6",
-    "pymilvus>=2.5.6",
+    "pymilvus[milvus-lite]>=2.5.6",
     "pymupdf>=1.16.14",
     "requests>=2.32.3",
     "sentence-transformers>=4.0.1",
     "sqlalchemy>=2.0.40",
     "torch>=2.6.0",
+    "tqdm>=4.67.1",
 ]
